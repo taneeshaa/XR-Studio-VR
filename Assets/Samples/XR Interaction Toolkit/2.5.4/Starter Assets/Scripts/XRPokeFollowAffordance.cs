@@ -18,15 +18,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                  "\nNote: Should be a direct child GameObject.")]
         Transform m_PokeFollowTransform;
 
-        [SerializeField]
-        [Tooltip("Animator to trigger the animation when poke interaction occurs.")]
-        Animator m_Animator;
-
-        [SerializeField]
-        [Tooltip("Name of the trigger parameter in the Animator to play on poke.")]
-        string m_AnimationTrigger = "PokePressed";
-
-
         /// <summary>
         /// Transform that will animate along the axis of interaction when this interactable is poked.
         /// Note: Must be a direct child GameObject as it moves in local space relative to the poke target's transform.
@@ -197,8 +188,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                     targetPosition = Vector3.ClampMagnitude(targetPosition, m_MaxDistance);
 
                 m_TransformTweenableVariable.target = targetPosition;
-
-                m_Animator.Play("Opening");
             }
             else if (m_ReturnToInitialPosition)
             {
