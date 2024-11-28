@@ -2395,7 +2395,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1014857019}
   m_Layer: 0
-  m_Name: Poke Interactions Sample
+  m_Name: Poke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
